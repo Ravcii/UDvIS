@@ -4,8 +4,8 @@ udvis:
     dev:
       type: postgres
       host: localhost
-      user: "{{ env_var('DBT_USER') }}"
-      password: "{{ env_var('DBT_PASS') }}"
+      user: "{{ var('DBT_USER') }}"
+      password: "{{ var('DBT_PASS') }}"
       port: 5432
       dbname: storage
       schema: public
