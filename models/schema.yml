@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_time
+
+sources:
+  - name: public
+    quoting:
+      database: true
+      schema: false
+      identifier: false
+    tables:
+      - name: clients
+      - name: groups
+      - name: orders
+      - name: reports
+      - name: routes
+      - name: vehicles
+      - name: work_orders
