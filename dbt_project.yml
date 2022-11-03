@@ -6,7 +6,7 @@ version: "1.0.0"
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: "udvis"
+profile: "normalize"
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -18,7 +18,7 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-packages-install-path: /dbt #for airbyte
+packages-install-path: ./dbt_packages #for airbyte
 target-path: "target" # directory which will store compiled SQL files
 clean-targets: # directories to be removed by `dbt clean`
   - "target"

@@ -15,5 +15,6 @@ sources:
       - name: orders
       - name: reports
       - name: routes
+      - name: schedules
       - name: vehicles
       - name: work_orders
