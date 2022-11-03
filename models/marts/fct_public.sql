@@ -23,8 +23,6 @@ WITH final AS (
 		dpv.id,
 		dg.id,
 		dr.id
-	ORDER BY
-		"total_runs"
 )
 SELECT
 	*
