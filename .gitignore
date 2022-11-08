@@ -1,6 +1,6 @@
-
-target/
+.env
+.user.yml
 dbt_packages/
 logs/
-.env
 run.sh
+target/
