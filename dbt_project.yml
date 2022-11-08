@@ -19,7 +19,7 @@ macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
 # Раскомментировать строку ниже при загрузке для Airbyte
-# packages-install-path: /dbt # for airbyte
+packages-install-path: /dbt # for airbyte
 
 target-path: "target" # directory which will store compiled SQL files
 clean-targets: # directories to be removed by `dbt clean`
