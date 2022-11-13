@@ -1,10 +1,11 @@
 WITH final AS (
 	SELECT
-		count(re.id) AS "total_runs",
+		{{ dbt_utils.surrogate_key (["dt.id", "dpv.id", "dg.id", "dr.id"]) }} AS "id",
 		dt.id AS "id_day",
 		dpv.id AS "id_vehicle",
 		dg.id AS "id_group",
 		dr.id AS "id_route",
+		count(re.id) AS "total_runs",
 		SUM(re.passengers_count) AS "total_passengers",
 		SUM(re.passengers_count * ro.price) AS "total_money",
 		AVG(re.passengers_count) AS "avg_passengers",

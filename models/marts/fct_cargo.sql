@@ -1,5 +1,6 @@
 WITH final AS (
 	SELECT
+		{{ dbt_utils.surrogate_key (["dt.id", "dcv.id", "dg.id", "dc.id"]) }} AS "id",
 		dt.id AS "id_day",
 		dcv.id AS "id_vehicle",
 		dg.id AS "id_group",
