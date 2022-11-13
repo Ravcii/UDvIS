@@ -1,8 +1,5 @@
 version: 2
 
-models:
-  - name: dim_time
-
 sources:
   - name: public
     quoting:

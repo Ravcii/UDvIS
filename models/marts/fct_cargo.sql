@@ -16,7 +16,7 @@ WITH final AS (
 		JOIN {{ ref ("dim_group") }} dg ON wo.id_brigade = dg.number
 		JOIN {{ ref ("dim_vehicle") }} bv ON wo.id_vehicle = bv.old_id
 		JOIN {{ ref ("dim_vehicle_cargo") }} dcv ON bv.id = dcv.id_vehicle
-		JOIN {{ ref ("dim_time") }} dt ON dt.day = date(created_at)
+		JOIN {{ ref ("dim_day") }} dt ON dt.day = date(created_at)
 	GROUP BY
 		dt.id,
 		dcv.id,
